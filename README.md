@@ -1,2 +1,2 @@
-# redux-boilerplate
-A configurable boilerplate for redux projects
+# react-config-boilerplate
+A configurable boilerplate for react projects
