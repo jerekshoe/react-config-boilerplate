@@ -1,0 +1,11 @@
+{
+  "name": "redux-boilerplate",
+  "version": "1.0.0",
+  "description": "A configurable boilerplate for redux projects.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "jerekshoe",
+  "license": "MIT"
+}
