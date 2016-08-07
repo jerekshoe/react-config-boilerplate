@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack --verbose --colors --display-error-details --config webpack/prod.config.js",
     "dev": "webpack-dev-server --config webpack/dev.config.js",
-    "prod": "node server/entry.js",
     "postinstall": "npm run build",
+    "prod": "node server/entry.js",
     "test": "npm run test"
   },
   "author": "jerekshoe",
