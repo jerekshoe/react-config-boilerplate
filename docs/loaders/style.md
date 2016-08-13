@@ -9,7 +9,7 @@
 ```sh
 $ npm install extract-text-webpack-plugin --save
 ```
-## All styles separate files
+## All styles in separate files
 #### Add this line:
 ```javascript
 new ExtractTextPlugin("styles.css")
@@ -22,9 +22,9 @@ new ExtractTextPlugin('bundle.css', { allChunks: true })
 ```
 #### to the plugin section of the prod.config.js and dev.config.js
 
+
 # Prerequisites
-### Before adding loaders for LESS or SASS we need to add the style-loader and
-### css-loader
+### Before adding loaders for LESS or SASS we need to add the style-loader and css-loader packages
 ### In terminal, type:
 ```sh
 $ npm install style-loader css-loader --save
