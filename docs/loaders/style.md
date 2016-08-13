@@ -5,6 +5,10 @@
 ### The Extract-Text-Webpack-Plugin allows you to extract your styles into external files.
 ### Learn more [here](https://github.com/webpack/extract-text-webpack-plugin)
 ## Setup
+### In terminal, type:
+```sh
+$ npm install extract-text-webpack-plugin --save
+```
 ## All styles separate files
 #### Add this line:
 ```javascript
@@ -17,6 +21,15 @@ new ExtractTextPlugin("styles.css")
 new ExtractTextPlugin('bundle.css', { allChunks: true })
 ```
 #### to the plugin section of the prod.config.js and dev.config.js
+
+# Prerequisites
+### Before adding loaders for LESS or SASS we need to add the style-loader and
+### css-loader
+### In terminal, type:
+```sh
+$ npm install style-loader css-loader --save
+```
+
 # CSS
 ## with extract-text-plugin
 #### Add this line:
@@ -30,6 +43,7 @@ new ExtractTextPlugin('bundle.css', { allChunks: true })
 { test: /\.css$/, loader: "style!css" }
 ```
 #### to the loader section of the prod.config.js and dev.config.js
+
 # LESS
 ## with extract-text-plugin
 #### Add this line:
@@ -43,6 +57,7 @@ new ExtractTextPlugin('bundle.css', { allChunks: true })
 { test: /\.less$/, loader: "style!css!less" }
 ```
 #### to the loader section of the prod.config.js and dev.config.js
+
 # SASS
 ## with extract-text-plugin
 #### Add this line:
