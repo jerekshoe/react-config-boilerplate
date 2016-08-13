@@ -3,13 +3,16 @@
 ### By default, webpack inlines all style files into the index.html file.
 ### The Extract-Text-Webpack-Plugin can extract your styles into external files.
 ### Learn more [here](https://github.com/webpack/extract-text-webpack-plugin)
+## Setup
 ### All styles separate files
+<hr />
 #### Add this line:
 ```javascript
 new ExtractTextPlugin("styles.css")
 ```
 #### to the plugin section of the prod.config.js and dev.config.js
 ### All styles in one file
+<hr />
 #### Add this line:
 ```javascript
 new ExtractTextPlugin('bundle.css', { allChunks: true })
