@@ -1,5 +1,5 @@
 {
-  "name": "redux-boilerplate",
+  "name": "react-config-boilerplate",
   "version": "1.0.0",
   "description": "A configurable boilerplate for redux projects.",
   "main": "src/index.js",
