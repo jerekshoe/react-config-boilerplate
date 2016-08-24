@@ -9,6 +9,10 @@
 ```sh
 $ npm install extract-text-webpack-plugin --save
 ```
+#### Then, add this line to the top of the prod.config.js and dev.config.js files
+```javascript
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+```
 ## All styles in separate files
 #### Add this line:
 ```javascript
