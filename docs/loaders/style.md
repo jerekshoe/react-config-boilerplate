@@ -22,7 +22,6 @@ new ExtractTextPlugin('bundle.css', { allChunks: true })
 ```
 #### to the plugin section of the prod.config.js and dev.config.js
 
-
 # Prerequisites
 ### Before adding loaders for LESS or SASS we need to add the style-loader and css-loader packages
 ### In terminal, type:
