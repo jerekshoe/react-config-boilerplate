@@ -1,8 +1,11 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
   entry: [
+    'babel-polyfill',
+    'bootstrap-loader',
     './src/index.js',
   ],
   output: {
@@ -13,9 +16,26 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap') },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style', 'css!sass'),
+      },
+      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
+      { test: /\.png$/, loader: 'url-loader?limit=100000' },
+      { test: /\.jpg$/, loader: 'file-loader' },
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url?limit=10000',
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file',
+      },
     ],
   },
   plugins: [
+    new ExtractTextPlugin('bundle.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {
@@ -28,6 +48,5 @@ module.exports = {
     colors: true,
     hot: true,
     progress: true,
-    inline: true,
   },
 };

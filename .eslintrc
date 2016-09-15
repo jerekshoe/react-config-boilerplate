@@ -1,0 +1,23 @@
+{
+    "extends": "airbnb",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "installedESLint": true,
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+      "no-console": 0,
+      "no-trailing-spaces": 0,
+      no-constant-condition: ["error", { "checkLoops": false }],
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jasmine": true,
+      "mocha": true
+    },
+}
