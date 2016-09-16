@@ -36,7 +36,7 @@
     "file-loader": "^0.9.0",
     "imports-loader": "^0.6.5",
     "jquery": "^3.1.0",
-    "node-sass": "^3.8.0",
+    "node-sass": "^3.10.0",
     "react": "^15.2.0",
     "react-cookie": "^0.4.7",
     "react-dom": "^15.2.0",
