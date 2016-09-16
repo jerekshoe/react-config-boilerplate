@@ -37,6 +37,10 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('bundle.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+    })
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
